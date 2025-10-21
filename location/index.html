@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de location</title>
+</head>
+<body>
+  <h1>Objeto location en JavaScript</h1>
+
+  <p>URL actual: <span id="url"></span></p>
+  <p>Dominio: <span id="dominio"></span></p>
+  <p>Ruta del archivo: <span id="ruta"></span></p>
+
+  <button onclick="redirigir()">Ir a OpenAI</button>
+  <button onclick="recargar()">Recargar página</button>
+
+  <script>
+    document.getElementById("url").textContent = location.href;
+    document.getElementById("dominio").textContent = location.hostname;
+    document.getElementById("ruta").textContent = location.pathname;
+
+    function redirigir() {
+      location.assign("https://www.openai.com");
+    }
+
+    function recargar() {
+      location.reload();
+    }
+  </script>
+</body>
+</html>
